@@ -19,6 +19,10 @@ header {
     background-color: var(--primary-color);
 }
 
+header h2 {
+    padding-right: 75%;
+}
+
 .principalContainer {
     display: flex;
     flex-direction: column;
@@ -30,8 +34,6 @@ header {
 .principalContainer h2, .containerAddTask {
     padding: 1% 0;
 }
-
-.principalContainer 
 
 .containerAddTask {
     background-color: var(--secondary-color);
