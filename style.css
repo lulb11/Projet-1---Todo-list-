@@ -1,12 +1,20 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 :root {
     --primary-color: #aec0ff;
     --secondary-color: #477BB6;
     --primary-color50: #aebfff83;
+    --background-color: #F5F5F5;
+    --title-font: 'Roboto', sans-serif;
+    --content-font: 'EB Garamond', serif;
+}
+
+body {
+    background-color: var(--background-color)
 }
 
 header {
@@ -15,25 +23,50 @@ header {
     justify-content: center;
     align-items: center;
     margin-bottom: 5%;
-    padding: 1vh;
+    padding-top: 6%;
     background-color: var(--primary-color);
 }
 
+h1 {
+    font-family: var(--title-font);
+}
+
 header h2 {
-    padding-right: 75%;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-right: 68%;
+    padding: 10px;
+    font-size: 17px;
+    background-color: var(--background-color);
+    border: 1px solid;
+    border-bottom-style: none;
+    font-family: var(--title-font);
 }
 
 .principalContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: ;
+    padding: 1;
     margin: 0 5%;
 }
 
-.principalContainer h2, .containerAddTask {
+#addCategory {
+    margin-top: 2%;
+}
+
+.principalContainer h2 {
+    margin-top: 7%;
+    margin-bottom: 2%;
+    font-size: 17px;
+    font-family: var(--title-font);
+}
+
+.principalContainer h2,
+.containerAddTask {
     padding: 1% 0;
 }
+
 
 .containerAddTask {
     background-color: var(--secondary-color);
