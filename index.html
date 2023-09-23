@@ -7,23 +7,33 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <header>
-    <h1>ZenList</h1>
-    <p>Boostez votre productivité !</p>
-   </header>
-    <nav>
-        <h2>To do list</h2>
-   </nav>
-   <section>
+    <header>
+        <h1>ZenList</h1>
+        <p>Boostez votre productivité !</p>
+    </header>
+    <div class="principalContainer">
+    <h2>To do list</h2>
     <h2>+ add</h2>
-    <div>Maison</div>
-    <div>Travail</div>
-    <div>Loisirs</div>
-   </section>
-   <section>
-    <h2></h2>
-   </section> 
-   <section></section> 
-   <section></section> 
+    <section class="containerAddTask">
+    <div>
+        <div>Maison</div>
+        <div>Travail</div>
+        <div>Loisirs</div>
+    </div>
+            <input type="text" id="myInput" class="input-group__input" placeholder="Décrivez votre tâche ici !" />
+    <div>
+        <button id="deleteButton">+</button>
+    </div>
+    </section>
+    <section>
+        <h2></h2>
+    </section> 
+    <section>
+
+    </section> 
+    <section>
+
+    </section> 
+    </div>
 </body>
 </html>

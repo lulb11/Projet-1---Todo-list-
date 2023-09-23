@@ -3,7 +3,33 @@
     margin: 0;
 }
 
+:root {
+    --primary-color: #aec0ff;
+    --secondary-color: #477BB6;
+    --primary-color50: #aebfff83;
+}
+
 header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+    padding: 1vh;
+    background-color: var(--primary-color);
 }
+
+.principalContainer {
+    margin: 0 5%
+}
+
+.containerAddTask {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 1vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: solid #000000 2px;
+}
+
