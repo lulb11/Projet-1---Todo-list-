@@ -68,6 +68,7 @@ header h2 {
 .myForm {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .containerCatTask {
@@ -86,10 +87,7 @@ header h2 {
     padding: 60px;
 }
 
-#todo-description {
-    margin: 0 15px;
-    display: flex;
-}
+
 
 
 h3 {
@@ -125,6 +123,9 @@ label {
     color: black;
 }
 
+#todo-description {
+    margin: 0 15px;
+}
 textarea {
     resize: none !important;
     background-color: var(--background-color);
@@ -139,3 +140,15 @@ textarea {
     /* font-family: var(--content-font); barre grise sur la droite qui apparait a lapplication de cette propriété*/
 }
 
+button { 
+    background-color: var(--background-color);
+    width: 40px;
+    height: 30px;
+    border-radius: 50%;
+    border: solid 2px black;
+    
+}
+
+p { 
+    font-size: 20px !important;
+}
