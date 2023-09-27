@@ -44,7 +44,6 @@ myFormOMG.addEventListener('submit', (eventEmittedWhenFormIsSubmitted) => {
 // // METHODE PHACOCHERE MAIS PLUS SIMPLE LOL
 // myFormOMG.addEventListener('submit', (event) => {
 //     event.preventDefault();
- 
 //     // Créer une nouvelle todo depuis le formulaire
 //     const newTodo = {
 //         category: event.target.elements[0].value, // work chill home
