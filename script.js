@@ -35,20 +35,21 @@ function injectTodoInHTML(todoToInject) {
 
 }
 
-myFormOMG.addEventListener('submit', (eventEmittedWhenFormIsSubmitted) => {
+myForm.addEventListener('submit', (eventEmittedWhenFormIsSubmitted) => {
     eventEmittedWhenFormIsSubmitted.preventDefault();
     const newTodo = createTodo(eventEmittedWhenFormIsSubmitted);
     injectTodoInHTML(newTodo);
 });
 
-// // METHODE PHACOCHERE MAIS PLUS SIMPLE LOL
-// myFormOMG.addEventListener('submit', (event) => {
+
+
+// myForm.addEventListener('submit', (event) => {
 //     event.preventDefault();
  
 //     // Créer une nouvelle todo depuis le formulaire
 //     const newTodo = {
 //         category: event.target.elements[0].value, // work chill home
-//         status: "TO_DO",
+//         status: "Todo",
 //         description: event.target.elements[1].value
 //     }
 
@@ -66,6 +67,3 @@ myFormOMG.addEventListener('submit', (eventEmittedWhenFormIsSubmitted) => {
 //     }
 
 // });
-
-// suppression d'une tache 
-// gestion du status (listen click)
