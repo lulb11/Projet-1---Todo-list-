@@ -61,7 +61,7 @@ header h2 {
 .containerAddTask {
     background-color: var(--secondary-color);
     border-radius: 10px;
-    padding: 2vh;
+    padding: 1.5vh;
     border: solid #000000 2px;
 }
 
@@ -95,3 +95,47 @@ header h2 {
 h3 {
     font-family: var(--title-font);
 }
+
+.menu {
+    height: 60px;
+}
+
+label {
+    font-family: var(--content-font);
+    padding: 20px 0 0 5px;
+    font-weight: bolder;
+}
+
+#todo-choose-cat {
+    width: 80px;
+    margin: 8px 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: var(--content-font);
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+
+#todo-choose-cat option {
+    font-family: var(--content-font);
+    font-size: 13px;
+    background-color: var(--background-color);
+    color: black;
+}
+
+textarea {
+    resize: none !important;
+    background-color: var(--background-color);
+    border-radius: 5px;
+    border: solid 1px black;
+}
+
+::placeholder {
+    text-align: center !important;
+    margin: 4px 4px;
+    padding-top: 8px;
+    /* font-family: var(--content-font); barre grise sur la droite qui apparait a lapplication de cette propriété*/
+}
+
