@@ -5,69 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZenList</title>
+    
+    
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,600&family=Kumbh+Sans&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Roboto:wght@400;500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,600&family=Kumbh+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-
-
     <header>
         <h1>ZenList</h1>
         <p>Boostez votre productivité !</p>
-        <h2>To do list</h2>
+        <h2>To Do List</h2>
     </header>
 
-
     <div class="principalContainer">
-
-        <h2 id="addCategory">+ add</h2>
+        <h3 id="addCategory">Ajoutez une tâche</h3>
 
         <section class="containerAddTask">
+            <form id="myForm" class="myForm">
+                <div class="menu">
+                    <label for="todo-choose-cat">Catégorie :</label>
+                    <select name="todo-choose-cat" id="todo-choose-cat">
+                        <option value="home">Maison</option>
+                        <option value="work">Travail</option>
+                        <option value="chill">Loisirs</option>
+                    </select>
+                </div>
 
-            <div>
-                <div>Maison</div>
-                <div>Travail</div>
-                <div>Loisirs</div>
-            </div>
+                <textarea name="todo-description" id="todo-description" cols="40" rows="3"
+                    placeholder="Ecrivez votre tache"></textarea>
 
-            <input type="text" id="myInput" class="input-group_input" placeholder="Décrivez votre tâche ici !">
-            
-            <div>
-                <button id="addButton"></button>
-            </div>
-
+                <button type="submit">+</button>
+            </form>
         </section>
 
-        <h2>Maison</h2>
-        
-        <section class="containerCatTask">
-            <button id="deleteButton">-</button>
-            <p>input task printera ici</p>
-            <button id="statusButton">O</button>
-        </section>
+        <h3>Maison</h3>
+        <section class="section-category-home" id="section-category-home"></section>
 
-        <h2>Loisirs</h2>
-        
-        <section class="containerCatTask">
-            <button id="deleteButton">-</button>
-            <p>input task printera ici</p>
-            <button id="statusButton">O</button>
-        </section>
-        <h2>Travail</h2>
-        <section class="containerCatTask">
-            <button id="deleteButton">-</button>
-            <p>input task printera ici</p>
-            <button id="statusButton">O</button>
-        </section>
+        <h3>Loisirs</h3>
+        <section class="section-category-work" id="section-category-work"></section>
+
+        <h3>Travail</h3>
+        <section class="section-category-chill" id="section-category-chill"></section>
     </div>
 </body>
 
