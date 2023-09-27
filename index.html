@@ -15,6 +15,17 @@
       rel="stylesheet"
     />
 
+
+
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,600&family=Kumbh+Sans&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+   
+
+
     <script src="script.js" defer></script>
   </head>
 
@@ -26,18 +37,41 @@
     </header>
 
     <div class="principalContainer">
-      <h3 id="addCategory">Ajoutez une tâche</h3>
+        <h3 id="addCategory">Ajoutez une tâche</h3>
 
-      <section class="containerAddTask">
-        <form id="myForm" class="myForm">
-          <div class="menu">
-            <label for="todo-choose-cat">Catégorie :</label>
-            <select name="todo-choose-cat" class="todo-choose-cat-menu">
-              <option class="option-design" value="home">Maison</option>
-              <option class="option-design" value="work">Travail</option>
-              <option class="option-design" value="chill">Loisirs</option>
-            </select>
-          </div>
+        <section class="containerAddTask">
+            <form id="myForm" class="myForm">
+                <div class="menu">
+                    <label for="todo-choose-cat">Catégorie :</label>
+                    <select name="todo-choose-cat" id="todo-choose-cat">
+                        <option value="home">Maison</option>
+                        <option value="work">Travail</option>
+                        <option value="chill">Loisirs</option>
+                    </select>
+                </div>
+
+                <textarea name="todo-description" id="todo-description" cols="40" rows="3"
+                    placeholder="Quelle tâche voulez-vous ajouter?"></textarea>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-plus-circle"
+                    viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path
+                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                </svg>
+            </form>
+        </section>
+
+        <h3>Maison</h3>
+        <section class="section-category-home" id="section-category-home"></section>
+
+        <h3>Loisirs</h3>
+        <section class="section-category-work" id="section-category-work"></section>
+
+        <h3>Travail</h3>
+        <section class="section-category-chill" id="section-category-chill"></section>
+    </div>
+</body>
 
           <textarea
             name="todo-description"
@@ -72,7 +106,7 @@
     </div>
     <footer>
       <p>
-        ©TotalySpies 
+        ©TotallySpies 
       </p>
     </footer>
   </body>
