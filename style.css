@@ -89,6 +89,9 @@ header h2 {
     border-radius: 10px;
     border: solid #000000 2px;
     padding: 60px;
+    padding: 18px;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -98,6 +101,64 @@ h3 {
     font-family: var(--title-font);
 }
 
+.section-task {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    padding: 10px 0px 10px 0px;
+    width: 22rem;
+    align-items: center;
+    height: auto;
+    justify-content: space-between;
+    padding-left: 11px;
+    padding-right: 11px;
+}
+
+.delete-button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    font-size: 3em;
+    position: relative;
+    margin-right: 12px;
+}
+
+.delete-button-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    bottom: -215%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+
+.status-button{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    position: relative; 
+    border: 1px solid rgba(123, 39, 39, 0.629)
+}
+
+.merge-delete-text{
+    display: flex;
+
+}
+
+.task-text{
+    display: flex;
+    align-items: center;
 .spacer {
     margin-bottom: 50px;
 }
