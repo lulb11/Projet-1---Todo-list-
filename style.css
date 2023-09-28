@@ -14,7 +14,11 @@
 }
 
 body {
-    background-color: var(--background-color)
+    background-color: var(--background-color);
+    position: relative; 
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -61,13 +65,14 @@ header h2 {
 .containerAddTask {
     background-color: var(--secondary-color);
     border-radius: 10px;
-    padding: 2vh;
+    padding: 1.5vh;
     border: solid #000000 2px;
 }
 
 .myForm {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .containerCatTask {
@@ -84,14 +89,149 @@ header h2 {
     border-radius: 10px;
     border: solid #000000 2px;
     padding: 60px;
+    padding: 18px;
+    display: flex;
+    justify-content: center;
 }
 
-#todo-description {
-    margin: 0 15px;
-    display: flex;
-}
+
 
 
 h3 {
     font-family: var(--title-font);
+}
+
+.section-task {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    padding: 10px 0px 10px 0px;
+    width: 22rem;
+    align-items: center;
+    height: auto;
+    justify-content: space-between;
+    padding-left: 11px;
+    padding-right: 11px;
+}
+
+.delete-button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    font-size: 3em;
+    position: relative;
+    margin-right: 12px;
+}
+
+.delete-button-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    bottom: -215%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+
+.status-button{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    position: relative; 
+    border: 1px solid rgba(123, 39, 39, 0.629)
+}
+
+.merge-delete-text{
+    display: flex;
+
+}
+
+.task-text{
+    display: flex;
+    align-items: center; 
+} 
+.spacer {
+    margin-bottom: 50px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #aec0ff;
+}
+
+footer p {
+    font-family: var(--content-font);
+    padding: 0.5vh 2vw 0.5vh 1vw;
+}
+.menu {
+    height: 60px;
+}
+
+label {
+    font-family: var(--content-font);
+    padding: 20px 0 0 5px;
+    font-weight: bolder;
+}
+
+#todo-choose-cat {
+    width: 80px;
+    margin: 8px 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: var(--content-font);
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+
+#todo-choose-cat option {
+    font-family: var(--content-font);
+    font-size: 13px;
+    background-color: var(--background-color);
+    color: black;
+}
+
+#todo-description {
+    margin: 0 15px;
+}
+textarea {
+    resize: none !important;
+    background-color: var(--background-color);
+    border-radius: 5px;
+    border: solid 1px black;
+}
+
+::placeholder {
+    text-align: center !important;
+    margin: 4px 4px;
+    padding-top: 8px;
+    /* font-family: var(--content-font); barre grise sur la droite qui apparait a lapplication de cette propriété*/
+}
+
+button { 
+    background-color: var(--background-color);
+    width: 40px;
+    height: 30px;
+    border-radius: 50%;
+    border: solid 2px black;
+    
+}
+
+p { 
+    font-size: 20px !important;
 }
