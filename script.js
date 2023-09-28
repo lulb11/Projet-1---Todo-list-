@@ -39,3 +39,4 @@ myForm.addEventListener('submit', (eventEmittedWhenFormIsSubmitted) => {
     const newTodo = createTodo(eventEmittedWhenFormIsSubmitted);
     injectTodoInHTML(newTodo);
 });
+
