@@ -1,5 +1,4 @@
-// récupère des elements html en js pour pouvoir interagir avec 
-const myFormOMG = document.getElementById('myForm');
+const myForm = document.getElementById('myForm');
 const categoryHome = document.getElementById('section-category-home');
 const categoryWork = document.getElementById('section-category-work');
 const categoryChill = document.getElementById('section-category-chill');
@@ -7,7 +6,7 @@ const categoryChill = document.getElementById('section-category-chill');
 
 function createTodo(event) {
     const newTodo = {
-        category: event.target.elements[0].value, // work chill home
+        category: event.target.elements[0].value,
         status: "ToDo",
         description: event.target.elements[1].value
     }
@@ -35,37 +34,8 @@ function injectTodoInHTML(todoToInject) {
 
 }
 
-myFormOMG.addEventListener('submit', (eventEmittedWhenFormIsSubmitted) => {
+myForm.addEventListener('submit', (eventEmittedWhenFormIsSubmitted) => {
     eventEmittedWhenFormIsSubmitted.preventDefault();
     const newTodo = createTodo(eventEmittedWhenFormIsSubmitted);
     injectTodoInHTML(newTodo);
 });
-
-// // METHODE PHACOCHERE MAIS PLUS SIMPLE LOL
-// myFormOMG.addEventListener('submit', (event) => {
-//     event.preventDefault();
- 
-//     // Créer une nouvelle todo depuis le formulaire
-//     const newTodo = {
-//         category: event.target.elements[0].value, // work chill home
-//         status: "TO_DO",
-//         description: event.target.elements[1].value
-//     }
-
-//     // En fonction de la catégorie de la todo créée, on injecte la todo dans le HTML
-//     if (newTodo.category === "home") {
-//         categoryHome.innerHTML += `<p>${newTodo.category} ${newTodo.description} ${newTodo.status}</p>`;
-//     }
-
-//     else if (newTodo.category === "work") {
-//         categoryWork.innerHTML += `<p>${newTodo.category} ${newTodo.description} ${newTodo.status}</p>`;
-//     }
-
-//     else {
-//         categoryChill.innerHTML += `<p>${newTodo.category} ${newTodo.description} ${newTodo.status}</p>`;
-//     }
-
-// });
-
-// suppression d'une tache 
-// gestion du status (listen click)
