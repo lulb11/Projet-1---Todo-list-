@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ZenList</title>
-    
-    
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,600&family=Kumbh+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    
-    
-    <script src="script.js" defer></script>
-</head>
 
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,600&family=Kumbh+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,600&family=Kumbh+Sans&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+   
+
+
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
     <header>
-        <h1>ZenList</h1>
-        <p>Boostez votre productivité !</p>
-        <h2>To Do List</h2>
+      <h1>ZenList</h1>
+      <p>Boostez votre productivité !</p>
+      <h2>To Do List</h2>
     </header>
 
     <div class="principalContainer">
@@ -37,11 +51,16 @@
                 </div>
 
                 <textarea name="todo-description" id="todo-description" cols="40" rows="3"
-                    placeholder="Ecrivez votre tache"></textarea>
+                    placeholder="Quelle tâche voulez-vous ajouter?"></textarea>
 
-                <button type="submit">+</button>
+                    <button type="submit"><p>+</p></button>
             </form>
         </section>
+      <h3>Maison</h3>
+      <section
+        class="section-category-home"
+        id="section-category-home"
+      ></section>
 
         <h3>Maison</h3>
         <section class="section-category-home" id="section-category-home">
@@ -84,6 +103,10 @@
 
 
     </div>
-</body>
-
+    <footer>
+      <p>
+        ©TotallySpies 
+      </p>
+    </footer>
+  </body>
 </html>
