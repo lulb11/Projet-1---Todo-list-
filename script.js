@@ -1,53 +1,44 @@
-const categoryHome = document.querySelector('.section-category-home');
-const categoryWork = document.querySelector('.section-category-work');
-const categoryChill = document.querySelector('.section-category-chill');
-const myForm = document.querySelector('.myForm');
+const myForm = document.getElementById('myForm');
+const categoryHome = document.getElementById('section-category-home');
+const categoryWork = document.getElementById('section-category-work');
+const categoryChill = document.getElementById('section-category-chill');
+const output = document.getElementById('output');
 
 
-myForm.addEventListener('submit', (event) => {
-  event.preventDefault();
+function createTodo(event) {
+    const newTodo = {
+        category: event.target.elements[0].value,
+        status: "ToDo",
+        description: event.target.elements[1].value
+    }
+    return newTodo;
+}
 
-  const newTodo = {
-    category: event.target.elements[0].value, // home work chill
-    description: event.target.elements[1].value, // text area 
-    status: "ToDo" // a adapter selon la gestion du status 
-  };
+function createTodoHTMLBody(todo) {
+    return `<p>${todo.category} ${todo.description} ${todo.status}</p> `;
+}
 
-  if (newTodo.category === "home") {
-    categoryHome.innerHTML += `<div class="section-task">
-    <div class="merge-delete-text">
-      <div class="delete-button">
-        <div class="delete-button-content">-</div>
-      </div>
-      <div class="task-text">${newTodo.description}</div>
-    </div>
-    <div class="status-button"></div>
-  </div>`
-  }
 
-  else if (newTodo.category === "work") {
-    categoryWork.innerHTML += `<div class="section-task">
-    <div class="merge-delete-text">
-      <div class="delete-button">
-        <div class="delete-button-content">-</div>
-      </div>
-      <div class="task-text">${newTodo.description}</div>
-    </div>
-    <div class="status-button"></div>
-  </div>`
-  }
+function injectTodoInHTML(todoToInject) {
+    if (todoToInject.category === "home") {
+        categoryHome.innerHTML += createTodoHTMLBody(todoToInject);
+    }
 
-  else  {
-    categoryChill.innerHTML += `<div class="section-task">
-      <div class="merge-delete-text">
-      <div class="delete-button">
-        <div class="delete-button-content">-</div>
-      </div>
-      <div class="task-text">${newTodo.description}</div>
-    </div>
-    <div class="status-button"></div>
-  </div>`}
+    else if (todoToInject.category === "work") {
+        categoryWork.innerHTML += createTodoHTMLBody(todoToInject);
+    }
 
+    else {
+        categoryChill.innerHTML += createTodoHTMLBody(todoToInject);
+    }
+
+}
+
+myForm.addEventListener('submit', (eventEmittedWhenFormIsSubmitted) => {
+    eventEmittedWhenFormIsSubmitted.preventDefault();
+    const newTodo = createTodo(eventEmittedWhenFormIsSubmitted);
+    localStorage.setItem('todoKey', JSON.stringify(newTodo));
+    injectTodoInHTML(newTodo);
 });
 
 window.addEventListener('load', function () {
@@ -58,10 +49,16 @@ window.addEventListener('load', function () {
   }
 });
 
-
 let btnTest = document.querySelector('.btn-test');
 let divTest = document.querySelector('.div-test');
 
+window.addEventListener('load', function () {
+  const userDataJSON = localStorage.getItem('todoKey');
+  if (userDataJSON) {
+    const userData = JSON.parse(userDataJSON);
+    injectTodoInHTML(userData); // Affichez les données sauvegardées lors du chargement de la page.
+  }
+});
 
 btnTest.addEventListener('click', (event) => {
     event.preventDefault();
