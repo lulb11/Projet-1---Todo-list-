@@ -4,6 +4,8 @@ const categoryChill = document.querySelector('.section-category-chill');
 const myForm = document.querySelector('.myForm');
 
 
+
+
 myForm.addEventListener('submit', (event) => {
   event.preventDefault();
 
