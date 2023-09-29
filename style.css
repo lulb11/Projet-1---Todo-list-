@@ -69,6 +69,16 @@ header h2 {
     border: solid #000000 2px;
 }
 
+.menu {
+    height: 60px;
+}
+
+label {
+    font-family: var(--content-font);
+    padding: 20px 0 0 5px;
+    font-weight: bolder;
+}
+
 .myForm {
     display: flex;
     align-items: center;
@@ -88,9 +98,12 @@ header h2 {
     background-color: var(--primary-color);
     border-radius: 10px;
     border: solid #000000 2px;
-    padding: 40px 40px;
+    padding: 2%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 150px;
 }
 
 
@@ -104,14 +117,13 @@ h3 {
     background-color: var(--background-color);
     display: flex;
     flex-direction: row;
-    border-radius: 5px;
-    padding: 10px 0px 10px 0px;
-    width: 22rem;
-    align-items: center;
-    height: auto;
     justify-content: space-between;
-    padding-left: 11px;
-    padding-right: 11px;
+    margin: 5px 0 8px 0px;
+    border-radius: 5px;
+    padding: 5px 11px 5px 11px;
+    width: 100%;
+    height: auto;
+    
 }
 
 .delete-button {
@@ -152,12 +164,13 @@ h3 {
 
 .merge-delete-text {
     display: flex;
-
 }
 
 .task-text {
     display: flex;
-    align-items: center;
+    justify-content: flex-start;
+    margin-left: 5px;
+    font-size: larger;
 }
 
 .spacer {
@@ -178,15 +191,6 @@ footer p {
     padding: 0.5vh 2vw 0.5vh 1vw;
 }
 
-.menu {
-    height: 60px;
-}
-
-label {
-    font-family: var(--content-font);
-    padding: 20px 0 0 5px;
-    font-weight: bolder;
-}
 
 #todo-choose-cat {
     width: 80px;
