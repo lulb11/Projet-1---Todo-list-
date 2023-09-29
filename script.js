@@ -2,6 +2,7 @@ const myForm = document.getElementById('myForm');
 const categoryHome = document.getElementById('section-category-home');
 const categoryWork = document.getElementById('section-category-work');
 const categoryChill = document.getElementById('section-category-chill');
+const output = document.getElementById('output');
 
 
 function createTodo(event) {
@@ -11,7 +12,6 @@ function createTodo(event) {
         description: event.target.elements[1].value
     }
     return newTodo;
-
 }
 
 function createTodoHTMLBody(todo) {
@@ -37,6 +37,27 @@ function injectTodoInHTML(todoToInject) {
 myForm.addEventListener('submit', (eventEmittedWhenFormIsSubmitted) => {
     eventEmittedWhenFormIsSubmitted.preventDefault();
     const newTodo = createTodo(eventEmittedWhenFormIsSubmitted);
+    localStorage.setItem('todoKey', JSON.stringify(newTodo));
     injectTodoInHTML(newTodo);
 });
 
+window.addEventListener('load', function () {
+  const userDataJSON = localStorage.getItem('todoKey');
+  if (userDataJSON) {
+    const userData = JSON.parse(userDataJSON);
+    injectTodoInHTML(userData); // Affichez les données sauvegardées lors du chargement de la page.
+  }
+});
+
+
+let btnTest = document.querySelector('.btn-test');
+let divTest = document.querySelector('.div-test');
+
+
+btnTest.addEventListener('click', (event) => {
+    event.preventDefault();
+    // Supprimez tous les enfants de la divTest
+    while (divTest.firstChild) {
+        divTest.removeChild(divTest.firstChild);
+    }
+});
