@@ -106,9 +106,6 @@ label {
     min-height: 150px;
 }
 
-
-
-
 h3 {
     font-family: var(--title-font);
 }
@@ -123,6 +120,7 @@ h3 {
     padding: 5px 11px 5px 11px;
     width: 100%;
     height: auto;
+
     
 }
 
@@ -149,7 +147,6 @@ h3 {
 }
 
 
-
 .status-button {
     width: 20px;
     height: 20px;
@@ -171,6 +168,7 @@ h3 {
     justify-content: flex-start;
     margin-left: 5px;
     font-size: larger;
+    font-style: var(--content-font);
 }
 
 .spacer {
