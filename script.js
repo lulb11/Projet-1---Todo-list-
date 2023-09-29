@@ -4,15 +4,13 @@ const categoryChill = document.querySelector('.section-category-chill');
 const myForm = document.querySelector('.myForm');
 
 
-
-
 myForm.addEventListener('submit', (event) => {
   event.preventDefault();
 
   const newTodo = {
     category: event.target.elements[0].value, // home work chill
-    description: event.target.elements[1].value, // text area 
-    status: "ToDo" // a adapter selon la gestion du status 
+    description: event.target.elements[1].value, // text area
+    status: "ToDo" // a adapter selon la gestion du status
   };
 
   if (newTodo.category === "home") {
@@ -38,8 +36,8 @@ myForm.addEventListener('submit', (event) => {
     <div class="status-button"></div>
   </div>`
   }
-
-  else  {
+  
+  else {
     categoryChill.innerHTML += `<div class="section-task">
       <div class="merge-delete-text">
       <div class="delete-button">
@@ -49,5 +47,4 @@ myForm.addEventListener('submit', (event) => {
     </div>
     <div class="status-button"></div>
   </div>`}
-
 });
