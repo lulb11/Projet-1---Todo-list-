@@ -159,11 +159,11 @@ h3 {
 }
 
 /*pour chaque <option> de mon status je définis une couleur */
-#toBeDone {
+#to-do {
     background-color: red;
 }
 
-#toDo {
+#in-progress {
     background-color: orange;
 }
 

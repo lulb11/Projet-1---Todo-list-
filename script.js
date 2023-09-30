@@ -20,9 +20,11 @@ myForm.addEventListener('submit', (event) => {
         <div class="delete-button-content">-</div>
       </div>
       <div class="task-text">${newTodo.description}</div>
-    </div>
-    <div class="status-button"></div>
-  </div>`
+        <select id="status-button" class="status-button" onchange="myCallback">
+            <option value="to-do">🔴 Tâche à faire</option>
+            <option value="in-progress">🟠 Tâche en cours</option>
+            <option value="done">🟢 Tâche terminée</option>
+        </select>`
   }
 
   else if (newTodo.category === "work") {
@@ -32,21 +34,25 @@ myForm.addEventListener('submit', (event) => {
         <div class="delete-button-content">-</div>
       </div>
       <div class="task-text">${newTodo.description}</div>
-    </div>
-    <div class="status-button"></div>
-  </div>`
+        <select id="status-button" class="status-button" onchange="myCallback">
+            <option value="to-do">🔴 Tâche à faire</option>
+            <option value="in-progress">🟠 Tâche en cours</option>
+            <option value="done">🟢 Tâche terminée</option>
+        </select>`
   }
   
   else {
     categoryChill.innerHTML += `<div class="section-task">
-      <div class="merge-delete-text">
+    <div class="merge-delete-text">
       <div class="delete-button">
         <div class="delete-button-content">-</div>
       </div>
       <div class="task-text">${newTodo.description}</div>
-    </div>
-    <div class="status-button"></div>
-  </div>`}
+        <select id="status-button" class="status-button" onchange="myCallback">
+            <option value="to-do">🔴 Tâche à faire</option>
+            <option value="in-progress">🟠 Tâche en cours</option>
+            <option value="done">🟢 Tâche terminée</option>
+        </select>`}
 });
 
 //Pour le bouton de status :
