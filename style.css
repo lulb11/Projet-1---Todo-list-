@@ -147,17 +147,30 @@ h3 {
 }
 
 
-.status-button {
+#status-button {
     width: 20px;
     height: 20px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
     position: relative;
-    border: 1px solid rgba(123, 39, 39, 0.629)
+    appearance: none; /*j'enlève l'apparence*/
 }
+
+/*pour chaque <option> de mon status je définis une couleur */
+#toBeDone {
+    background-color: red;
+}
+
+#toDo {
+    background-color: orange;
+}
+
+#done {
+    background-color: green;
+}
+/*fini ici*/
 
 .merge-delete-text {
     display: flex;
