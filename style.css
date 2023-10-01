@@ -151,24 +151,39 @@ h3 {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: red;
-    position: relative;
-    border: 1px solid rgba(123, 39, 39, 0.629)
+    margin-left: 50px;
+    appearance: none; /*j'enlève l'apparence*/
 }
 
+/*pour chaque <option> de mon status je définis une couleur */
+#to-do {
+    background-color: red;
+}
+
+#in-progress {
+    background-color: orange;
+}
+
+#done {
+    background-color: green;
+}
+/*fini ici*/
+
 .merge-delete-text {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    width: 100%;
+
 }
 
 .task-text {
     display: flex;
-    justify-content: flex-start;
-    margin-left: 5px;
+    align-items: center;
+    margin-left: 1rem;
     font-size: larger;
     font-style: var(--content-font);
+    overflow-wrap: break-word;
 }
 
 .spacer {
@@ -227,7 +242,7 @@ textarea {
     /* font-family: var(--content-font); barre grise sur la droite qui apparait a lapplication de cette propriété*/
 }
 
-button {
+#addButton {
     background-color: var(--background-color);
     width: 40px;
     height: 30px;
