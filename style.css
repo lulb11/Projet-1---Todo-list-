@@ -67,6 +67,11 @@ header h2 {
     border-radius: 10px;
     padding: 1.5vh;
     border: solid #000000 2px;
+    /*ajout pour pouvoir agrandir la page et que l'élément s'étale sur la longueur : 
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;*/
 }
 
 .menu {
@@ -82,7 +87,7 @@ label {
 .myForm {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: auto;
 }
 
 .containerCatTask {
