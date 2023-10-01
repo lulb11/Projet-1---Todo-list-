@@ -147,14 +147,11 @@ h3 {
 }
 
 
-#status-button {
+.status-button {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    margin-left: 50px;
     appearance: none; /*j'enlève l'apparence*/
 }
 
@@ -173,15 +170,20 @@ h3 {
 /*fini ici*/
 
 .merge-delete-text {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    width: 100%;
+
 }
 
 .task-text {
     display: flex;
-    justify-content: flex-start;
-    margin-left: 5px;
+    align-items: center;
+    margin-left: 1rem;
     font-size: larger;
     font-style: var(--content-font);
+    overflow-wrap: break-word;
 }
 
 .spacer {

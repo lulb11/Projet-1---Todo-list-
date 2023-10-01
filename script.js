@@ -10,7 +10,7 @@ myForm.addEventListener('submit', (event) => {
   const newTodo = {
     category: event.target.elements[0].value, // home work chill
     description: event.target.elements[1].value, // text area
-    status: "ToDo" // a adapter selon la gestion du status
+    status: "ToDo" // a adapter selon la gestion du status (Je n'ai malheureusement pas compris cette partie)
   };
 //proposition à patir d'ici
   if (newTodo.category === "home") {
@@ -87,8 +87,8 @@ myForm.addEventListener('submit', (event) => {
 
 //Pour le bouton de status :
 function myCallback() {
-  const selectElement = document.getElementById("status-button");
-  // je vais chercher l'élement <select> avec son ID //
+  const selectElement = document.getElementByClassName("status-button");
+  // je vais chercher l'élement <select> avec sa class //
   const selectedOption = selectElement.options[selectElement.selectedIndex];
   // je vais chercher l'option qui est sélectionnée en lui disant avec selectElement.selectedIndex 
   //que je récupère l'index de l'option puis j'accède à cet index avec "selectElement.options"//
