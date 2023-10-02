@@ -11,14 +11,16 @@
     --background-color: #F5F5F5;
     --title-font: 'Roboto', sans-serif;
     --content-font: 'EB Garamond', serif;
+    --footer-height: 35px;
 }
 
 body {
     background-color: var(--background-color);
     position: relative;
-    min-height: 100vh;
+    min-height: calc(100vh - var(--footer-height) + 30px);
     margin: 0;
-    padding: 0;
+    width: 100%;
+    padding-bottom: calc(var(--footer-height) + 30px);
 }
 
 header {
@@ -46,10 +48,11 @@ header h2 {
 }
 
 .principalContainer {
-    display: flex;
-    flex-direction: column;
     justify-content: space-around;
-    margin: 0 5%;
+    padding: 0 5%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #addCategory {
@@ -76,7 +79,7 @@ header h2 {
 label {
     font-family: var(--content-font);
     padding: 20px 0 0 5px;
-    font-weight: bolder;
+    font-weight: 700;
 }
 
 .myForm {
@@ -92,16 +95,13 @@ label {
     padding: 60px;
 }
 
+.section-category-chill,
 .section-category-home,
-.section-category-work,
-.section-category-chill {
+.section-category-work {
     background-color: var(--primary-color);
     border-radius: 10px;
     border: solid #000000 2px;
     padding: 2%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     width: 100%;
     min-height: 150px;
 }
@@ -112,16 +112,12 @@ h3 {
 
 .section-task {
     background-color: var(--background-color);
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     margin: 5px 0 8px 0px;
     border-radius: 5px;
     padding: 5px 11px 5px 11px;
     width: 100%;
     height: auto;
-
-    
 }
 
 .delete-button {
@@ -152,7 +148,8 @@ h3 {
     height: 20px;
     border-radius: 50%;
     margin-left: 50px;
-    appearance: none; /*j'enlève l'apparence*/
+    appearance: none;
+    /*j'enlève l'apparence*/
 }
 
 /*pour chaque <option> de mon status je définis une couleur */
@@ -167,6 +164,7 @@ h3 {
 #done {
     background-color: green;
 }
+
 /*fini ici*/
 
 .merge-delete-text {
@@ -182,26 +180,24 @@ h3 {
     align-items: center;
     margin-left: 1rem;
     font-size: larger;
-    font-style: var(--content-font);
-    overflow-wrap: break-word;
-}
+    font-family: var(--content-font);
+    overflow-wrap: anywhere;
 
-.spacer {
-    margin-bottom: 50px;
 }
 
 footer {
     position: absolute;
+    left: 0;
     bottom: 0;
     width: 100%;
-    display: flex;
-    justify-content: flex-end;
     background-color: #aec0ff;
 }
 
 footer p {
     font-family: var(--content-font);
     padding: 0.5vh 2vw 0.5vh 1vw;
+    line-height: var(--footer-height);
+    text-align: right;
 }
 
 
@@ -239,18 +235,60 @@ textarea {
     text-align: center !important;
     margin: 4px 4px;
     padding-top: 8px;
-    /* font-family: var(--content-font); barre grise sur la droite qui apparait a lapplication de cette propriété*/
 }
 
 #addButton {
     background-color: var(--background-color);
-    width: 40px;
-    height: 30px;
+    width: 2.2rem;
+    height: 2rem;
     border-radius: 50%;
     border: solid 2px black;
 
 }
 
-p {
+span {
     font-size: 20px !important;
 }
+
+/* Responsive tablette paysage et desktop */
+
+@media screen and (min-device-width : 768px) {
+
+    header {
+        margin-bottom: 0;
+        padding-top: 20px;
+    
+    }
+    header h1 {
+        font-size: 50px;
+        padding-bottom: 10px;
+        
+    }
+
+    header p {
+        font-size: 35px !important;
+    }
+
+    header h2 {
+        padding: 15px 30PX;
+        margin: 0 75% 0 4%;
+        font-size: larger;
+    }
+
+    .addTask {
+        margin: 0;
+    }
+
+    .catTask {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    footer p {
+        font-size: larger;
+    }
+}
+
+;

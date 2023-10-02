@@ -21,52 +21,58 @@
     <p>Boostez votre productivité !</p>
     <h2>To Do List</h2>
   </header>
+  <main>
 
+    <div class="principalContainer">
+      <div class="addTask">
+        <h3 id="addCategory">Ajoutez une tâche</h3>
 
-  
+        <section class="containerAddTask">
+          <form id="myForm" class="myForm">
+            <div class="menu">
+              <label for="todo-choose-cat">Catégorie :</label>
+              <select name="todo-choose-cat" id="todo-choose-cat">
+                <option value="home">Maison</option>
+                <option value="work">Travail</option>
+                <option value="chill">Loisirs</option>
+              </select>
+            </div>
 
-  <div class="principalContainer">
-    <h3 id="addCategory">Ajoutez une tâche</h3>
+            <textarea name="todo-description" id="todo-description" cols="40" rows="3"
+              placeholder="Quelle tâche voulez-vous ajouter?"></textarea>
 
-    <section class="containerAddTask">
-      <form id="myForm" class="myForm">
-        <div class="menu">
-          <label for="todo-choose-cat">Catégorie :</label>
-          <select name="todo-choose-cat" id="todo-choose-cat">
-            <option value="home">Maison</option>
-            <option value="work">Travail</option>
-            <option value="chill">Loisirs</option>
-          </select>
+            <button id="addButton" type="submit">
+              <span>+</span>
+            </button>
+
+          </form>
+
+        </section>
+      </div>
+
+      <div class="catTask">
+        <div class="nameCat">
+          <h3>Maison</h3>
+          <section class="section-category-home" id="section-category-home"></section>
         </div>
-
-        <textarea name="todo-description" id="todo-description" cols="40" rows="3"
-          placeholder="Quelle tâche voulez-vous ajouter?"></textarea>
-
-        <button id="addButton" type="submit">
-          <p>+</p> <!-- proposition : mettre un span à la place de p, c'est plus utilisé dans ce genre de cas, p, c'est plus pour du contenu de texte, description...-->
-        </button>
-      </form>
-      
-    </section>
-    <h3>Maison</h3>
-    <section class="section-category-home" id="section-category-home">
-    </section>
-
-    <h3>Travail</h3>
-    <section class="section-category-work" id="section-category-work">
-    </section>
-
-    <h3>Loisirs</h3>
-    <section class="section-category-chill" id="section-category-chill">
-    </section>
-    
-    <div class="spacer"></div>
+        <div class="nameCat">
+          <h3>Travail</h3>
+          <section class="section-category-work" id="section-category-work"></section>
+        </div>
+        <div class="nameCat">
+          <h3>Loisirs</h3>
+          <section class="section-category-chill" id="section-category-chill"></section>
+        </div>
+      </div>
     </div>
+  </main>
+
   <footer>
     <p>
       ©TotallySpies
     </p>
   </footer>
+
 </body>
 
 </html>

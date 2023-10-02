@@ -12,77 +12,34 @@ myForm.addEventListener('submit', (event) => {
     description: event.target.elements[1].value, // text area
     status: "ToDo" // a adapter selon la gestion du status (Je n'ai malheureusement pas compris cette partie)
   };
-//proposition à patir d'ici
-  if (newTodo.category === "home") {
-    categoryHome.innerHTML += `<div class="section-task">
-    <div class="merge-delete-text">
-      <div class="delete-button">
-        <div class="delete-button-content">-</div>
-      </div>
-      <div class="task-text">${newTodo.description}</div>
-        <select id="status-button" class="status-button" onchange="myCallback">
-            <option value="to-do">🔴 Tâche à faire</option>
-            <option value="in-progress">🟠 Tâche en cours</option>
-            <option value="done">🟢 Tâche terminée</option>
-        </select>`
-  }
-
-  else if (newTodo.category === "work") {
-    categoryWork.innerHTML += `<div class="section-task">
-    <div class="merge-delete-text">
-      <div class="delete-button">
-        <div class="delete-button-content">-</div>
-      </div>
-      <div class="task-text">${newTodo.description}</div>
-        <select id="status-button" class="status-button" onchange="myCallback">
-            <option value="to-do">🔴 Tâche à faire</option>
-            <option value="in-progress">🟠 Tâche en cours</option>
-            <option value="done">🟢 Tâche terminée</option>
-        </select>`
-  }
   
-  else {
-    categoryChill.innerHTML += `<div class="section-task">
-    <div class="merge-delete-text">
-      <div class="delete-button">
-        <div class="delete-button-content">-</div>
-      </div>
-      <div class="task-text">${newTodo.description}</div>
-        <select id="status-button" class="status-button" onchange="myCallback">
-            <option value="to-do">🔴 Tâche à faire</option>
-            <option value="in-progress">🟠 Tâche en cours</option>
-            <option value="done">🟢 Tâche terminée</option>
-        </select>`}
+const content = document.createElement('div');
+content.className = 'section-task';
+content.innerHTML = `
+<div class="merge-delete-text">
+  <div class="delete-button">
+    <div class="delete-button-content">-</div>
+  </div>
+  <div class="task-text">${newTodo.description}</div>
+    <select id="status-button" class="status-button" onchange="myCallback">
+      <option value="to-do">🔴 Tâche à faire</option>
+      <option value="in-progress">🟠 Tâche en cours</option>
+      <option value="done">🟢 Tâche terminée</option>
+    </select>
+</div>
+</div>`;
+
+if (newTodo.category === "home") {
+  categoryHome.appendChild(content);
+}
+else if (newTodo.category === "work") {
+  categoryWork.appendChild(content);
+}
+else {
+  categoryChill.appendChild(content);
+}
+event.target.elements[1].value = "";
 });
-
-//Je propose, comme axe d'amélioration ://
-
-// const content = document.createElement('div');
-// content.className = 'section-task';
-// content.innerHTML = `
-// <div class="merge-delete-text">
-//   <div class="delete-button">
-//     <div class="delete-button-content">-</div>
-//   </div>
-//   <div class="task-text">${newTodo.description}</div>
-//     <select id="status-button" class="status-button" onchange="myCallback">
-//       <option value="to-do">🔴 Tâche à faire</option>
-//       <option value="in-progress">🟠 Tâche en cours</option>
-//       <option value="done">🟢 Tâche terminée</option>
-//     </select>
-// </div>
-// </div>`;
-
-// if (newTodo.category === "home") {
-//   categoryHome.appendChild(content);
-// }
-// else if (newTodo.category === "work") {
-//   categoryWork.appendChild(content);
-// }
-// else {
-//   categoryChill.appendChild(content);
-// }
-// });
 
 
 //Pour le bouton de status :
@@ -98,4 +55,4 @@ function myCallback() {
   
   selectElement.className = selectedValue;
   // On applique la classe CSS correspondante à la valeur sélectionnée //
-}
+};
