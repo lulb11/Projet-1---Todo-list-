@@ -12,10 +12,10 @@ myForm.addEventListener('submit', (event) => {
     description: event.target.elements[1].value, // text area
     status: "ToDo" // a adapter selon la gestion du status (Je n'ai malheureusement pas compris cette partie)
   };
-  
-const content = document.createElement('div');
-content.className = 'section-task';
-content.innerHTML = `
+
+  const content = document.createElement('div');
+  content.className = 'section-task';
+  content.innerHTML = `
     <button class="delete-button">-</button>
   <div class="task-text">${newTodo.description}</div>
     <select id="status-button" class="status-button" onchange="myCallback">
@@ -24,23 +24,30 @@ content.innerHTML = `
       <option value="done">🟢 Tâche terminée</option>
     </select>`;
 
-if (newTodo.category === "home") {
-  categoryHome.appendChild(content);
-}
-else if (newTodo.category === "work") {
-  categoryWork.appendChild(content);
-}
-else {
-  categoryChill.appendChild(content);
-}
-event.target.elements[1].value = "";
+  if (newTodo.category === "home") {
+    categoryHome.appendChild(content);
+  }
+  else if (newTodo.category === "work") {
+    categoryWork.appendChild(content);
+  }
+  else {
+    categoryChill.appendChild(content);
+  }
+  event.target.elements[1].value = "";
 
-content.querySelector(".delete-button").addEventListener("click", (event) => {
+  content.querySelector(".delete-button").addEventListener("click", (event) => {
     event.target.parentElement.remove();
     // saveContent();
   });
 
+  event.target.elements[1].addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault(); // Prevents the Enter key from adding a newline
+      myForm.dispatchEvent(new Event('submit')); // Trigger form submission
+    }
+  });
 });
+
 
 
 
@@ -54,7 +61,7 @@ function myCallback() {
   const selectedValue = selectedOption.value;
   // j'extrait la valeur de l'option sélectionnée. J'accède à la propriété "value" de mes options//
 
-  
+
   selectElement.className = selectedValue;
   // On applique la classe CSS correspondante à la valeur sélectionnée //
 };
