@@ -74,25 +74,21 @@ header h2 {
 
 .menu {
     height: 60px;
+    display: flex;
+    flex-direction: column;
 }
 
 label {
     font-family: var(--content-font);
-    padding: 20px 0 0 5px;
+    padding: 0 5px;
     font-weight: 700;
 }
 
 .myForm {
-    display: flex;
+    display: grid;
     align-items: center;
-    width: 100%;
-}
-
-.containerCatTask {
-    background-color: var(--primary-color);
-    border-radius: 10px;
-    border: solid #000000 2px;
-    padding: 60px;
+    width: 97%;
+    grid-template-columns: auto 1fr auto;
 }
 
 .section-category-chill,
@@ -108,6 +104,7 @@ label {
 
 h3 {
     font-family: var(--title-font);
+    margin-top: 10px;
 }
 
 .section-task {
@@ -142,14 +139,12 @@ h3 {
 
 }
 
-
 .status-button {
     width: 20px;
     height: 20px;
     border-radius: 50%;
     margin-left: 50px;
     appearance: none;
-    /*j'enlève l'apparence*/
 }
 
 /*pour chaque <option> de mon status je définis une couleur */
@@ -203,7 +198,7 @@ footer p {
 
 #todo-choose-cat {
     width: 80px;
-    margin: 8px 0;
+    margin: 5px 0;
     border: 1px solid black;
     border-radius: 5px;
     font-size: 16px;
@@ -233,17 +228,17 @@ textarea {
 
 ::placeholder {
     text-align: center !important;
-    margin: 4px 4px;
+    margin: 4px 8px;
     padding-top: 8px;
 }
 
 #addButton {
     background-color: var(--background-color);
-    width: 2.2rem;
-    height: 2rem;
+    width: 200%;
+    height: 30px;
     border-radius: 50%;
     border: solid 2px black;
-
+    max-width: 30px; /* pour que le bouton ne change plus de taille */
 }
 
 span {
@@ -289,6 +284,13 @@ span {
     footer p {
         font-size: larger;
     }
+    
+    ::placeholder {
+    font-size: 20px;
+    font-family: var(--content-font);
+
+  }
 }
 
 ;
+
