@@ -108,6 +108,7 @@ h3 {
 }
 
 .section-task {
+    display: flex;
     background-color: var(--background-color);
     justify-content: space-between;
     margin: 5px 0 8px 0px;
