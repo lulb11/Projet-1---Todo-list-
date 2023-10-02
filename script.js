@@ -15,18 +15,14 @@ myForm.addEventListener("submit", (event) => {
   const content = document.createElement("div");
   content.className = "section-task";
   content.innerHTML = `
-<div class="merge-delete-text">
-  <div class="delete-button">
-    <div class="delete-button-content">-</div>
-  </div>
-
-
+    <button class="delete-button">-</button>
   <div class="task-text">${newTodo.description}</div>
     <select id="status-button" class="status-button" onchange="myCallback">
       <option value="to-do">🔴 Tâche à faire</option>
       <option value="in-progress">🟠 Tâche en cours</option>
       <option value="done">🟢 Tâche terminée</option>
     </select>`;
+
   if (newTodo.category === "home") {
     categoryHome.appendChild(content);
   } else if (newTodo.category === "work") {
@@ -41,6 +37,7 @@ myForm.addEventListener("submit", (event) => {
     // saveContent();
   });
 });
+
 //Pour le bouton de status :
 function myCallback() {
   const selectElement = document.getElementByClassName("status-button");

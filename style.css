@@ -1,297 +1,284 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --primary-color: #aec0ff;
-    --secondary-color: #477BB6;
-    --primary-color50: #aebfff83;
-    --background-color: #F5F5F5;
-    --title-font: 'Roboto', sans-serif;
-    --content-font: 'EB Garamond', serif;
-    --footer-height: 35px;
+  --primary-color: #aec0ff;
+  --secondary-color: #477bb6;
+  --primary-color50: #aebfff83;
+  --background-color: #f5f5f5;
+  --title-font: "Roboto", sans-serif;
+  --content-font: "EB Garamond", serif;
+  --footer-height: 35px;
 }
 
 body {
-    background-color: var(--background-color);
-    position: relative;
-    min-height: calc(100vh - var(--footer-height) + 30px);
-    margin: 0;
-    width: 100%;
-    padding-bottom: calc(var(--footer-height) + 30px);
+  background-color: var(--background-color);
+  position: relative;
+  min-height: calc(100vh - var(--footer-height) + 30px);
+  margin: 0;
+  width: 100%;
+  padding-bottom: calc(var(--footer-height) + 30px);
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5%;
-    padding-top: 6%;
-    background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+  padding-top: 6%;
+  background-color: var(--primary-color);
 }
 
 h1 {
-    font-family: var(--title-font);
+  font-family: var(--title-font);
 }
 
 header h2 {
-    margin: 5% 68% 0 5%;
-    padding: 10px;
-    font-size: 17px;
-    background-color: var(--background-color);
-    border: 1px solid;
-    border-bottom-style: none;
-    font-family: var(--title-font);
+  margin: 5% 68% 0 5%;
+  padding: 10px;
+  font-size: 17px;
+  background-color: var(--background-color);
+  border: 1px solid;
+  border-bottom-style: none;
+  font-family: var(--title-font);
 }
 
 .principalContainer {
-    justify-content: space-around;
-    padding: 0 5%;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+  justify-content: space-around;
+  padding: 0 5%;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 #addCategory {
-    margin-top: 2%;
+  margin-top: 2%;
 }
 
 .principalContainer h3,
 .containerAddTask {
-    padding: 1% 0;
+  padding: 1% 0;
 }
 
-
 .containerAddTask {
-    background-color: var(--secondary-color);
-    border-radius: 10px;
-    padding: 1.5vh;
-    border: solid #000000 2px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  padding: 1.5vh;
+  border: solid #000000 2px;
 }
 
 .menu {
-    height: 60px;
-    display: flex;
-    flex-direction: column;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
 }
 
 label {
-    font-family: var(--content-font);
-    padding: 0 5px;
-    font-weight: 700;
+  font-family: var(--content-font);
+  padding: 0 5px;
+  font-weight: 700;
 }
 
 .myForm {
-    display: grid;
-    align-items: center;
-    width: 97%;
-    grid-template-columns: auto 1fr auto;
+  display: grid;
+  align-items: center;
+  width: 97%;
+  grid-template-columns: auto 1fr auto;
 }
 
 .section-category-chill,
 .section-category-home,
 .section-category-work {
-    background-color: var(--primary-color);
-    border-radius: 10px;
-    border: solid #000000 2px;
-    padding: 2%;
-    width: 100%;
-    min-height: 150px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  border: solid #000000 2px;
+  padding: 2%;
+  width: 100%;
+  min-height: 150px;
 }
 
 h3 {
-    font-family: var(--title-font);
-    margin-top: 10px;
+  font-family: var(--title-font);
+  margin-top: 10px;
 }
 
 .section-task {
-    display: flex;
-    background-color: var(--background-color);
-    justify-content: space-between;
-    margin: 5px 0 8px 0px;
-    border-radius: 5px;
-    padding: 5px 11px 5px 11px;
-    width: 100%;
-    height: auto;
+  display: flex;
+  background-color: var(--background-color);
+  justify-content: space-between;
+  margin: 5px 0 8px 0px;
+  border-radius: 5px;
+  padding: 5px 11px 5px 11px;
+  width: 100%;
+  height: auto;
 }
 
 .delete-button {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #000;
-    font-size: 3em;
-    position: relative;
-    margin-right: 12px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  font-size: 3em;
+  position: relative;
+  margin-right: 12px;
 }
 
 .delete-button-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    bottom: -215%;
-    transform: translate(-50%, -50%);
-
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: -215%;
+  transform: translate(-50%, -50%);
 }
 
 .status-button {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin-left: 50px;
-    appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 50px;
+  appearance: none;
 }
 
 /*pour chaque <option> de mon status je définis une couleur */
 #to-do {
-    background-color: red;
+  background-color: red;
 }
 
 #in-progress {
-    background-color: orange;
+  background-color: orange;
 }
 
 #done {
-    background-color: green;
+  background-color: green;
 }
 
 /*fini ici*/
 
 .merge-delete-text {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    width: 100%;
-
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  width: 100%;
 }
 
 .task-text {
-    display: flex;
-    align-items: center;
-    margin-left: 1rem;
-    font-size: larger;
-    font-family: var(--content-font);
-    overflow-wrap: anywhere;
-
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  font-size: larger;
+  font-family: var(--content-font);
+  overflow-wrap: anywhere;
 }
 
 footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #aec0ff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #aec0ff;
 }
 
 footer p {
-    font-family: var(--content-font);
-    padding: 0.5vh 2vw 0.5vh 1vw;
-    line-height: var(--footer-height);
-    text-align: right;
+  font-family: var(--content-font);
+  padding: 0.5vh 2vw 0.5vh 1vw;
+  line-height: var(--footer-height);
+  text-align: right;
 }
-
 
 #todo-choose-cat {
-    width: 80px;
-    margin: 5px 0;
-    border: 1px solid black;
-    border-radius: 5px;
-    font-size: 16px;
-    font-family: var(--content-font);
-    background-color: var(--background-color);
-    text-align: center;
+  width: 80px;
+  margin: 5px 0;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: var(--content-font);
+  background-color: var(--background-color);
+  text-align: center;
 }
 
-
 #todo-choose-cat option {
-    font-family: var(--content-font);
-    font-size: 13px;
-    background-color: var(--background-color);
-    color: black;
+  font-family: var(--content-font);
+  font-size: 13px;
+  background-color: var(--background-color);
+  color: black;
 }
 
 #todo-description {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 textarea {
-    resize: none !important;
-    background-color: var(--background-color);
-    border-radius: 5px;
-    border: solid 1px black;
+  resize: none !important;
+  background-color: var(--background-color);
+  border-radius: 5px;
+  border: solid 1px black;
 }
 
 ::placeholder {
-    text-align: center !important;
-    margin: 4px 8px;
-    padding-top: 8px;
+  text-align: center !important;
+  margin: 4px 8px;
+  padding-top: 8px;
 }
 
 #addButton {
-    background-color: var(--background-color);
-    width: 200%;
-    height: 30px;
-    border-radius: 50%;
-    border: solid 2px black;
-    max-width: 30px; /* pour que le bouton ne change plus de taille */
+  background-color: var(--background-color);
+  width: 200%;
+  height: 30px;
+  border-radius: 50%;
+  border: solid 2px black;
+  max-width: 30px; /* pour que le bouton ne change plus de taille */
 }
 
 span {
-    font-size: 20px !important;
+  font-size: 20px !important;
 }
 
 /* Responsive tablette paysage et desktop */
 
-@media screen and (min-device-width : 768px) {
+@media screen and (min-device-width: 768px) {
+  header {
+    margin-bottom: 0;
+    padding-top: 20px;
+  }
+  header h1 {
+    font-size: 50px;
+    padding-bottom: 10px;
+  }
 
-    header {
-        margin-bottom: 0;
-        padding-top: 20px;
-    
-    }
-    header h1 {
-        font-size: 50px;
-        padding-bottom: 10px;
-        
-    }
+  header p {
+    font-size: 35px !important;
+  }
 
-    header p {
-        font-size: 35px !important;
-    }
+  header h2 {
+    padding: 15px 30px;
+    margin: 0 75% 0 4%;
+    font-size: larger;
+  }
 
-    header h2 {
-        padding: 15px 30PX;
-        margin: 0 75% 0 4%;
-        font-size: larger;
-    }
+  .addTask {
+    margin: 0;
+  }
 
-    .addTask {
-        margin: 0;
-    }
+  .catTask {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    margin-top: 30px;
+  }
 
-    .catTask {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 25px;
-        margin-top: 30px;
-    }
+  footer p {
+    font-size: larger;
+  }
 
-    footer p {
-        font-size: larger;
-    }
-    
-    ::placeholder {
+  ::placeholder {
     font-size: 20px;
     font-family: var(--content-font);
-
   }
 }
-
-;
-
