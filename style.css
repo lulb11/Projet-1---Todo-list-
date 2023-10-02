@@ -80,9 +80,10 @@ label {
 }
 
 .myForm {
-    display: flex;
+    display: grid;
     align-items: center;
-    width: 100%;
+    width: 97%;
+    grid-template-columns: auto 1fr auto;
 }
 
 .containerCatTask {
@@ -120,8 +121,6 @@ h3 {
     padding: 5px 11px 5px 11px;
     width: 100%;
     height: auto;
-
-    
 }
 
 .delete-button {
@@ -146,13 +145,13 @@ h3 {
 
 }
 
-
 .status-button {
     width: 20px;
     height: 20px;
     border-radius: 50%;
     margin-left: 50px;
     appearance: none; /*j'enlève l'apparence*/
+    border: none;
 }
 
 /*pour chaque <option> de mon status je définis une couleur */
@@ -244,13 +243,18 @@ textarea {
 
 #addButton {
     background-color: var(--background-color);
-    width: 40px;
+    width: 200%;
     height: 30px;
     border-radius: 50%;
     border: solid 2px black;
-
+    max-width: 30px; /* pour que le bouton ne change plus de taille */
 }
 
-p {
+span {
     font-size: 20px !important;
 }
+
+::placeholder {
+    font-size: 11px;
+    font-family: var(--content-font);
+  }
