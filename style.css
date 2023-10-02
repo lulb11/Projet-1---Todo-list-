@@ -125,17 +125,9 @@ h3 {
   justify-content: center;
   align-items: center;
   border: 1px solid #000;
-  font-size: 3em;
+  font-size: 42px;
   position: relative;
-  margin-right: 12px;
-}
-
-.delete-button-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  bottom: -215%;
-  transform: translate(-50%, -50%);
+  font-family: var(--title-font);
 }
 
 .status-button {
