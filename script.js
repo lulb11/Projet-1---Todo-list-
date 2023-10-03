@@ -32,7 +32,7 @@ function createTodos(todos) {
     const content = document.createElement("div");
     content.className = "section-task";
     content.innerHTML = `
-    <button class="delete-button"><img src="./assets/button-delete.svg" class="delete-img"/></button>
+    <button class="delete-button">-</button>
   <div class="task-text">${todos[i].description}</div>
     <select class="status-button" onchange="myCallback">
       <option value="to-do">🔴 Tâche à faire</option>

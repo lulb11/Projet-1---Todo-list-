@@ -122,18 +122,22 @@ h3 {
 .delete-button {
   width: 25px;
   height: 25px;
+  min-width: 25px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: none;
-  background-color: transparent;
+  border: 1px solid #000;
+  font-size: 34px;
+  position: relative;
+  font-family: var(--title-font);
 }
 
 .status-button {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  margin-left: 50px;
+  margin-left: 1rem;
   appearance: none;
 }
 
