@@ -144,4 +144,12 @@ function loadTodos() {
 // }
 // console.log(getStatusValue("to-do"));
 loadTodos();
-// remove.item.localstorage storage.clear()
+
+let btnClearStorage = document.querySelector("#btn-clear-storage");
+
+btnClearStorage.addEventListener("click", () => {
+  localStorage.clear()
+  if(todos = []) {
+    window.location.reload();}
+  });
+
