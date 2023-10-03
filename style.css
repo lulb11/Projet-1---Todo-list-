@@ -122,14 +122,11 @@ h3 {
 .delete-button {
   width: 25px;
   height: 25px;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #000;
-  font-size: 42px;
-  position: relative;
-  font-family: var(--title-font);
+  border: none;
+  background-color: transparent;
 }
 
 .status-button {
@@ -234,6 +231,10 @@ span {
   font-size: 20px !important;
 }
 
+.delete-img {
+  width: 1.5rem;
+}
+
 /* Responsive tablette paysage et desktop */
 
 @media screen and (min-device-width: 768px) {
@@ -246,17 +247,15 @@ span {
     padding-bottom: 10px;
   }
 
-    header {
-        margin-bottom: 0;
-        padding-top: 20px;
+  header {
+    margin-bottom: 0;
+    padding-top: 20px;
+  }
 
-    }
-
-    header h1 {
-        font-size: 50px;
-        padding-bottom: 10px;
-
-    }
+  header h1 {
+    font-size: 50px;
+    padding-bottom: 10px;
+  }
 
   header h2 {
     padding: 15px 30px;
@@ -278,7 +277,7 @@ span {
   footer p {
     font-size: larger;
   }
-  
+
   ::placeholder {
     font-size: 20px;
     font-family: var(--content-font);
@@ -289,4 +288,4 @@ span {
   .section-category-work {
     max-height: 420px;
   }
-};
+}
