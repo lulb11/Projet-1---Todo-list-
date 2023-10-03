@@ -108,7 +108,7 @@ const addTask = (task) => {
 
 function saveTodos() {
   localStorage.setItem("todos", JSON.stringify(todos));
-}
+};
 
 window.addEventListener("beforeunload", function () {
   saveTodos();
@@ -122,8 +122,8 @@ function loadTodos() {
     todos.forEach((todo) => {
       addTask(todo);
     });
-  }
-}
+  };
+};
 
 loadTodos();
 // remove.item.localstorage storage.clear()
