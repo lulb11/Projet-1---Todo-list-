@@ -246,9 +246,17 @@ span {
     padding-bottom: 10px;
   }
 
-  header p {
-    font-size: 35px !important;
-  }
+    header {
+        margin-bottom: 0;
+        padding-top: 20px;
+
+    }
+
+    header h1 {
+        font-size: 50px;
+        padding-bottom: 10px;
+
+    }
 
   header h2 {
     padding: 15px 30px;
@@ -270,7 +278,7 @@ span {
   footer p {
     font-size: larger;
   }
-
+  
   ::placeholder {
     font-size: 20px;
     font-family: var(--content-font);
@@ -281,4 +289,4 @@ span {
   .section-category-work {
     max-height: 420px;
   }
-}
+};
