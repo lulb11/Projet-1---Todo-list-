@@ -99,6 +99,8 @@ label {
   padding: 2%;
   width: 100%;
   min-height: 150px;
+  overflow-y: auto;
+  max-height: 150px;
 }
 
 h3 {
@@ -276,14 +278,15 @@ span {
   footer p {
     font-size: larger;
   }
+  
+  ::placeholder {
+    font-size: 20px;
+    font-family: var(--content-font);
+  }
 
-    footer p {
-        font-size: larger;
-    }
-
-    ::placeholder {
-        font-size: 20px;
-        font-family: var(--content-font);
-
-    }
+  .section-category-chill,
+  .section-category-home,
+  .section-category-work {
+    max-height: 420px;
+  }
 };
