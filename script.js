@@ -5,6 +5,14 @@ const myForm = document.querySelector(".myForm");
 let todos = [];
 const textArea = document.querySelector("#todo-description");
 
+textArea.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    e.preventDefault(); // Prevents the Enter key from adding a newline
+    myForm.dispatchEvent(new Event('submit')); // Trigger form submission
+  }
+});
+
+
 myForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -17,7 +25,10 @@ myForm.addEventListener("submit", (event) => {
   todos.push(newTodo);
 
   createTodos([newTodo]);
+  // a verifier
+
 });
+
 
 function createTodos(todos) {
   for (let i = 0; i < todos.length; i++) {
@@ -71,6 +82,7 @@ function loadTodos() {
   }
 }
 loadTodos();
+
 
 //Pour le bouton de status :
 function myCallback() {
