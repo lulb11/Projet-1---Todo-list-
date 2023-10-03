@@ -7,7 +7,6 @@
 :root {
   --primary-color: #aec0ff;
   --secondary-color: #477bb6;
-
   --background-color: #f5f5f5;
   --title-font: "Roboto", sans-serif;
   --content-font: "EB Garamond", serif;
@@ -281,6 +280,7 @@ span {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 25px;
     margin-top: 30px;
+    max-height: 80vh;
   }
 
   footer p {
