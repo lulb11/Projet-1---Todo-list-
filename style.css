@@ -143,6 +143,9 @@ h3 {
   border-radius: 50%;
   margin-left: 1rem;
   appearance: none;
+  outline: none;
+  border: none;
+  background-color: var(--background-color);
 }
 
 /*pour chaque <option> de mon status je définis une couleur */
@@ -211,6 +214,7 @@ footer p {
 
 #todo-description {
   margin: 0 15px;
+  padding: 1% 0 0 2%;
 }
 
 textarea {
@@ -232,7 +236,8 @@ textarea {
   height: 30px;
   border-radius: 50%;
   border: solid 2px black;
-  max-width: 30px; /* pour que le bouton ne change plus de taille */
+  max-width: 30px;
+  /* pour que le bouton ne change plus de taille */
 }
 
 span {
@@ -250,6 +255,7 @@ span {
     margin-bottom: 0;
     padding-top: 20px;
   }
+
   header h1 {
     font-size: 58px;
     padding-bottom: 10px;
@@ -258,7 +264,6 @@ span {
   p {
     font-size: 1.8rem;
   }
-
 
   header h2 {
     padding: 15px 30px;
@@ -282,14 +287,23 @@ span {
     font-size: larger;
   }
 
+
+  #todo-description {
+    margin: 0 15px;
+    padding: 1%;
+  }
+  
   ::placeholder {
     font-size: 20px;
     font-family: var(--content-font);
+    display: flex;
+    align-items: center;
   }
+
 
   .section-category-chill,
   .section-category-home,
   .section-category-work {
     max-height: 420px;
   }
-}
+};
