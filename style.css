@@ -174,7 +174,6 @@ h3 {
     display: flex;
     align-items: center;
     margin-left: 1rem;
-    font-size: larger;
     font-family: var(--content-font);
     overflow-wrap: anywhere;
 
@@ -238,7 +237,8 @@ textarea {
     height: 30px;
     border-radius: 50%;
     border: solid 2px black;
-    max-width: 30px; /* pour que le bouton ne change plus de taille */
+    max-width: 30px;
+    /* pour que le bouton ne change plus de taille */
 }
 
 span {
@@ -252,12 +252,13 @@ span {
     header {
         margin-bottom: 0;
         padding-top: 20px;
-    
+
     }
+
     header h1 {
         font-size: 50px;
         padding-bottom: 10px;
-        
+
     }
 
     header p {
@@ -284,13 +285,10 @@ span {
     footer p {
         font-size: larger;
     }
-    
+
     ::placeholder {
-    font-size: 20px;
-    font-family: var(--content-font);
+        font-size: 20px;
+        font-family: var(--content-font);
 
-  }
-}
-
-;
-
+    }
+};
