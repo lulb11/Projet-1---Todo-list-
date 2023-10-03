@@ -7,7 +7,7 @@
 :root {
   --primary-color: #aec0ff;
   --secondary-color: #477bb6;
-  --primary-color50: #aebfff83;
+
   --background-color: #f5f5f5;
   --title-font: "Roboto", sans-serif;
   --content-font: "EB Garamond", serif;
@@ -35,6 +35,7 @@ header {
 
 h1 {
   font-family: var(--title-font);
+  font-size: 43px;
 }
 
 header h2 {
@@ -43,10 +44,14 @@ header h2 {
   font-size: 17px;
   background-color: var(--background-color);
   border: 1px solid;
+  border-radius: 5px 5px 0 0;
   border-bottom-style: none;
   font-family: var(--title-font);
 }
 
+p {
+    font-size: 28px;
+  }
 .principalContainer {
   justify-content: space-around;
   padding: 0 5%;
@@ -247,19 +252,19 @@ span {
     padding-top: 20px;
   }
   header h1 {
-    font-size: 50px;
+    font-size: 58px;
     padding-bottom: 10px;
   }
-
+  
   header {
     margin-bottom: 0;
     padding-top: 20px;
   }
 
-  header h1 {
-    font-size: 50px;
-    padding-bottom: 10px;
+  p {
+    font-size: 1.8rem;
   }
+
 
   header h2 {
     padding: 15px 30px;
