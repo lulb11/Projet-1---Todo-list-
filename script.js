@@ -20,7 +20,7 @@ myForm.addEventListener("submit", (event) => {
     uuid: uuidGenerator(),
     category: event.target.elements[0].value, // home work chill
     description: event.target.elements[1].value, // text area
-    status: "ToDo", // a adapter selon la gestion du status (Je n'ai malheureusement pas compris cette partie)
+    status: "to-do", // a adapter selon la gestion du status (Je n'ai malheureusement pas compris cette partie)
   };
 
   todos.push(newTodo);
@@ -63,6 +63,14 @@ const addTask = (task) => {
   } else {
     categoryChill.appendChild(content);
   }
+
+  const statusButton = content.querySelector(".status-button");
+  statusButton.value = task.status;
+
+  statusButton.addEventListener("change", (event) => {
+    task.status = event.target.value;
+    saveTodos();
+  }); // actualise status à chaque changement :^F
 
   setDeleteEventListener(task, content);
 };
@@ -125,5 +133,15 @@ function loadTodos() {
   }
 }
 
+// function getStatusValue (status) {
+//   if (status === "to-do") {
+//     newTodo.status = "🔴 Tâche à faire";
+//   } else if (status === "in-progress") {
+//     newTodo.status = "🟠 Tâche en cours";
+//   } else if (status === "done") {
+//     newTodo.status = "🟢 Tâche terminée";
+//   }
+// }
+// console.log(getStatusValue("to-do"));
 loadTodos();
 // remove.item.localstorage storage.clear()
