@@ -20,13 +20,12 @@ myForm.addEventListener("submit", (event) => {
     uuid: uuidGenerator(),
     category: event.target.elements[0].value, // home work chill
     description: event.target.elements[1].value, // text area
-    status: "to-do", // a adapter selon la gestion du status (Je n'ai malheureusement pas compris cette partie)
+    status: "to-do", 
   };
 
   todos.push(newTodo);
   saveTodos();
 
-  //createTodos([newTodo]);
   addTask(newTodo);
 
   // clear le texarea
@@ -70,49 +69,10 @@ const addTask = (task) => {
   statusButton.addEventListener("change", (event) => {
     task.status = event.target.value;
     saveTodos();
-  }); // actualise status à chaque changement :^F
+  }); // actualise status à chaque changement 
 
   setDeleteEventListener(task, content);
 };
-
-// function createTodos(todos) {
-//   for (let i = 0; i < todos.length; i++) {
-//     const content = document.createElement("div");
-//     content.className = "section-task";
-//     content.innerHTML = `
-//     <button class="delete-button">-</button>
-//   <div class="task-text">${todos[i].description}</div>
-//     <select class="status-button" onchange="myCallback">
-//       <option value="to-do">🔴 Tâche à faire</option>
-//       <option value="in-progress">🟠 Tâche en cours</option>
-//       <option value="done">🟢 Tâche terminée</option>
-//     </select>`;
-//     content
-//       .querySelector(".delete-button")
-//       .addEventListener("click", (event) => {
-//         const index = todos.findIndex(function (todo) {
-//           return (
-//             todo.description ===
-//             event.target.parentElement.querySelector(".task-text").textContent
-//           );
-//         });
-//         console.log(index, todos);
-//         todos.splice(index, 1);
-//         console.log(todos);
-//         event.target.parentElement.remove();
-//         saveTodos();
-//       });
-
-//     if (todos[i].category === "home") {
-//       categoryHome.appendChild(content);
-//     } else if (todos[i].category === "work") {
-//       categoryWork.appendChild(content);
-//     } else {
-//       categoryChill.appendChild(content);
-//     }
-//   }
-//   textArea.value = "";
-// }
 
 function saveTodos() {
   localStorage.setItem("todos", JSON.stringify(todos));
@@ -133,23 +93,13 @@ function loadTodos() {
   }
 }
 
-// function getStatusValue (status) {
-//   if (status === "to-do") {
-//     newTodo.status = "🔴 Tâche à faire";
-//   } else if (status === "in-progress") {
-//     newTodo.status = "🟠 Tâche en cours";
-//   } else if (status === "done") {
-//     newTodo.status = "🟢 Tâche terminée";
-//   }
-// }
-// console.log(getStatusValue("to-do"));
 loadTodos();
 
 let btnClearStorage = document.querySelector("#btn-clear-storage");
 
 btnClearStorage.addEventListener("click", () => {
-  localStorage.clear()
-  if(todos = []) {
-    window.location.reload();}
-  });
-
+  localStorage.clear();
+  if ((todos = [])) {
+    window.location.reload();
+  }
+});
