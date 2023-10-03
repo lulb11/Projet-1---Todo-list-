@@ -83,7 +83,7 @@ function loadTodos() {
 }
 loadTodos();
 
-
+/*
 //Pour le bouton de status :
 function myCallback() {
   const selectElement = document.getElementByClassName("status-button");
@@ -95,5 +95,5 @@ function myCallback() {
   // j'extrait la valeur de l'option sélectionnée. J'accède à la propriété "value" de mes options//
 
   selectElement.className = selectedValue;
-  // On applique la classe CSS correspondante à la valeur sélectionnée //
-}
+  // On applique la classe CSS correspondante à la valeur sélectionnée //*/
+// }
