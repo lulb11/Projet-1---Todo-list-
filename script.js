@@ -24,7 +24,7 @@ myForm.addEventListener("submit", (event) => {
     uuid: uuidGenerator(),
     category: event.target.elements[0].value,
     description: event.target.elements[1].value,
-    status: "to-do",
+    status: "to-do", 
   };
 
   todos.push(newTodo);
@@ -93,3 +93,12 @@ function loadTodos() {
 };
 
 loadTodos();
+
+let btnClearStorage = document.querySelector("#btn-clear-storage");
+
+btnClearStorage.addEventListener("click", () => {
+  localStorage.clear();
+  if ((todos = [])) {
+    window.location.reload();
+  }
+});
