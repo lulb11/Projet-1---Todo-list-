@@ -27,6 +27,13 @@ function saveTodos() {
 myForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  const description = event.target.elements[1].value;
+
+  if (description.trim() === "") {
+    alert("La description de la tâche ne peut pas être vide.");
+    return;
+  }
+
   const newTodo = {
     uuid: uuidGenerator(),
     category: event.target.elements[0].value,
@@ -108,8 +115,8 @@ btnClearStorage.addEventListener("click", () => {
   if (confirmation) {
     localStorage.clear();
     if ((todos = [])) {
-    window.location.reload();
-  }
+      window.location.reload();
+    }
   } else {
     alert("L'action a été annulée.");
   }

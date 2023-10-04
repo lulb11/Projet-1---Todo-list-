@@ -27,27 +27,26 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #50A060;
+  background-color: #50a060;
 }
 
 p {
-    font-size: 28px;
-    padding: 0 0 15px 0;
-    color: mintcream;
-  }
+  font-size: 28px;
+  padding: 0 0 15px 0;
+  color: mintcream;
+}
 
 /* MAIN */
 
 .principalContainer {
   justify-content: space-around;
   padding: 0 5%;
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 #addCategory {
-  margin-top: 2%;
+  margin: 6% 0 2% 0;
 }
 
 .principalContainer h3,
@@ -89,7 +88,6 @@ label {
   border-radius: 10px;
   border: solid grey 1px;
   padding: 2%;
-  width: 100%;
   min-height: 150px;
   overflow-y: auto;
   max-height: 150px;
@@ -107,8 +105,6 @@ h3 {
   margin: 8px 0 8px 0px;
   border-radius: 5px;
   padding: 8px 11px 8px 11px;
-  width: 100%;
-  height: auto;
 }
 
 .delete-button {
@@ -118,11 +114,11 @@ h3 {
   border-radius: 50%;
   display: flex;
   justify-content: center;
-  align-items: center;
   border: 1px solid #000;
-  font-size: 34px;
+  font-size: 30px;
   position: relative;
   font-family: var(--title-font);
+  line-height: 20px;
 }
 
 .status-button {
@@ -190,6 +186,10 @@ textarea {
   border: solid 1px grey;
 }
 
+textarea:focus {
+  outline: none;
+}
+
 ::placeholder {
   text-align: center !important;
   margin: 4px 8px;
@@ -213,6 +213,37 @@ span {
   width: 1.5rem;
 }
 
+#btn-clear-storage {
+  height: 2rem;
+  border-radius: 10px;
+  background-color: #c9ccd3;
+  margin-top: 0.3rem;
+  margin-right: 0.1rem;
+  padding: 0.2rem 0.3rem;
+  font-family: var(--title-font);
+  color: #444852;
+  border: gray;
+}
+
+#btn-clear-storage:hover {
+  background-color: #dedfe6;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  transform: scale(1.04);
+  cursor: pointer;
+}
+
+#btn-clear-storage,
+#btn-clear-storage:hover {
+  transition: all 0.3s;
+}
+
+.clear-storage {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.2rem;
+}
+
 /* FOOTER */
 
 footer {
@@ -220,7 +251,7 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #50A060;
+  background-color: #50a060;
 }
 
 footer p {
@@ -228,15 +259,12 @@ footer p {
   padding: 0.5vh 2vw 0.5vh 1vw;
   line-height: var(--footer-height);
   text-align: right;
+  font-size: 18px;
 }
 
 /* Responsive tablette paysage et desktop */
 
 @media screen and (min-device-width: 768px) {
-  header {
-    margin-bottom: 0;
-    padding-top: 20px;
-  }
 
   header h1 {
     font-size: 58px;
@@ -251,10 +279,6 @@ footer p {
   .menu {
     padding: 0 0 0 20px;
   }
- 
-  .addTask {
-    margin: 0;
-  }
 
   .catTask {
     display: grid;
@@ -264,13 +288,18 @@ footer p {
     max-height: 80vh;
   }
 
+  #addCategory {
+    margin: 20px 0 0;
+    padding-left: 5px;
+  }
+
   footer p {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   #todo-description {
     margin: 0 25px 0 25px;
-    padding: 1%;
+    font-size: 1.2em;
   }
 
   ::placeholder {
@@ -286,8 +315,14 @@ footer p {
     max-height: 260px;
   }
 
-  .logo { 
+  .logo {
     width: 380px;
     height: 150px;
   }
-}
+
+  #btn-clear-storage {
+    width: 8rem;
+    font-size: 1rem;
+    margin-top: 0.2rem;
+  }
+};
