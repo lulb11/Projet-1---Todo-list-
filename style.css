@@ -186,6 +186,10 @@ textarea {
   border: solid 1px grey;
 }
 
+textarea:focus {
+  outline: none;
+}
+
 ::placeholder {
   text-align: center !important;
   margin: 4px 8px;
