@@ -218,8 +218,20 @@ span {
   padding: 0.2rem 0.3rem;
   font-family: var(--title-font);
   color: #444852;
-  font-weight: bold;
   border: gray;
+}
+
+#btn-clear-storage:hover {
+  background-color: #dedfe6;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  transform: scale(1.04);
+  cursor: pointer;
+}
+
+#btn-clear-storage,
+#btn-clear-storage:hover {
+  transition: all 0.3s;
 }
 
 .clear-storage {
