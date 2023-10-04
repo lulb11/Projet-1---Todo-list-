@@ -50,8 +50,8 @@ header h2 {
 }
 
 p {
-    font-size: 28px;
-  }
+  font-size: 28px;
+}
 
 /* MAIN */
 
@@ -143,6 +143,7 @@ h3 {
 
 .status-button {
   width: 20px;
+  align-self: center;
   height: 20px;
   border-radius: 50%;
   margin-left: 1rem;
@@ -250,8 +251,6 @@ footer p {
   text-align: right;
 }
 
-
-
 /* Responsive tablette paysage et desktop */
 
 @media screen and (min-device-width: 768px) {
@@ -264,7 +263,7 @@ footer p {
     font-size: 58px;
     padding-bottom: 10px;
   }
-  
+
   p {
     font-size: 1.8rem;
   }
@@ -291,12 +290,11 @@ footer p {
     font-size: larger;
   }
 
-
   #todo-description {
     margin: 0 15px;
     padding: 1%;
   }
-  
+
   ::placeholder {
     font-size: 20px;
     font-family: var(--content-font);
@@ -304,10 +302,9 @@ footer p {
     align-items: center;
   }
 
-
   .section-category-chill,
   .section-category-home,
   .section-category-work {
     max-height: 420px;
   }
-};
+}
