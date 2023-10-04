@@ -5,6 +5,13 @@ const myForm = document.querySelector(".myForm");
 let todos = [];
 const textArea = document.querySelector("#todo-description");
 
+textArea.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    myForm.dispatchEvent(new Event("submit"));
+  }
+});
+
 const uuidGenerator = () =>
   "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (c) => {
     const r = (Math.random() * 16) | 0;
@@ -12,6 +19,7 @@ const uuidGenerator = () =>
 
     return v.toString(16);
   });
+
 
 function saveTodos() {
   localStorage.setItem("todos", JSON.stringify(todos));
@@ -24,7 +32,7 @@ myForm.addEventListener("submit", (event) => {
     uuid: uuidGenerator(),
     category: event.target.elements[0].value,
     description: event.target.elements[1].value,
-    status: "to-do", 
+    status: "to-do",
   };
 
   todos.push(newTodo);
