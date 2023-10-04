@@ -234,6 +234,26 @@ span {
   width: 1.5rem;
 }
 
+#btn-clear-storage {
+  height: 0.8rem;
+  width: 0.8rem;
+  border-radius: 50%;
+  margin-left: 0.4rem;
+  background-color: rgb(122, 21, 21);
+}
+
+.clear-storage-txt {
+  font-size: 0.6rem;
+  padding-left: 0.2rem;
+  font-family: var(--content-font);
+}
+
+.clear-storage {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.2rem;
+}
+
 /* FOOTER */
 
 footer {
