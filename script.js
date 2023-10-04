@@ -20,10 +20,9 @@ const uuidGenerator = () =>
     return v.toString(16);
   });
 
-
 function saveTodos() {
   localStorage.setItem("todos", JSON.stringify(todos));
-};
+}
 
 myForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -72,7 +71,6 @@ const addTask = (task) => {
     categoryChill.appendChild(content);
   }
 
-
   const statusButton = content.querySelector(".status-button");
   statusButton.value = task.status;
 
@@ -83,7 +81,6 @@ const addTask = (task) => {
 
   setDeleteEventListener(task, content);
 };
-
 
 window.addEventListener("beforeunload", function () {
   saveTodos();
@@ -97,16 +94,23 @@ function loadTodos() {
     todos.forEach((todo) => {
       addTask(todo);
     });
-  };
-};
+  }
+}
 
 loadTodos();
 
 let btnClearStorage = document.querySelector("#btn-clear-storage");
 
 btnClearStorage.addEventListener("click", () => {
-  localStorage.clear();
-  if ((todos = [])) {
+  const confirmation = confirm(
+    "Êtes-vous sûr de vouloir effacer toutes vos tâches ?"
+  );
+  if (confirmation) {
+    localStorage.clear();
+    if ((todos = [])) {
     window.location.reload();
+  }
+  } else {
+    alert("L'action a été annulée.");
   }
 });

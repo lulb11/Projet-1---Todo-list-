@@ -31,10 +31,15 @@ header {
 }
 
 p {
+<<<<<<< HEAD
     font-size: 28px;
     padding: 0 0 15px 0;
     color: mintcream;
   }
+=======
+  font-size: 28px;
+}
+>>>>>>> c4bc51c3fa3f3aacaead307a8f8328ebb7f3949b
 
 /* MAIN */
 
@@ -127,6 +132,7 @@ h3 {
 
 .status-button {
   width: 20px;
+  align-self: center;
   height: 20px;
   border-radius: 50%;
   align-self: center;
@@ -229,8 +235,6 @@ footer p {
   text-align: right;
 }
 
-
-
 /* Responsive tablette paysage et desktop */
 
 @media screen and (min-device-width: 768px) {
@@ -243,7 +247,7 @@ footer p {
     font-size: 58px;
     padding-bottom: 10px;
   }
-  
+
   p {
     font-size: 1.8rem;
     padding: 0 0 20px 0;
@@ -269,19 +273,17 @@ footer p {
     font-size: 25px;
   }
 
-
   #todo-description {
     margin: 0 25px 0 25px;
     padding: 1%;
   }
-  
+
   ::placeholder {
     font-size: 25px;
     font-family: var(--content-font);
     display: flex;
     align-items: center;
   }
-
 
   .section-category-chill,
   .section-category-home,
@@ -293,4 +295,4 @@ footer p {
     width: 380px;
     height: 150px;
   }
-};
+}
