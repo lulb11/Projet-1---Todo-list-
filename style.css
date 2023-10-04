@@ -21,6 +21,7 @@ body {
   width: 100%;
   padding-bottom: calc(var(--footer-height) + 30px);
 }
+/* HEADER */
 
 header {
   display: flex;
@@ -51,6 +52,9 @@ header h2 {
 p {
     font-size: 28px;
   }
+
+/* MAIN */
+
 .principalContainer {
   justify-content: space-around;
   padding: 0 5%;
@@ -148,7 +152,6 @@ h3 {
   background-color: var(--background-color);
 }
 
-/*pour chaque <option> de mon status je définis une couleur */
 #to-do {
   background-color: red;
 }
@@ -160,8 +163,6 @@ h3 {
 #done {
   background-color: green;
 }
-
-/*fini ici*/
 
 .merge-delete-text {
   display: grid;
@@ -177,21 +178,6 @@ h3 {
   font-size: larger;
   font-family: var(--content-font);
   overflow-wrap: anywhere;
-}
-
-footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #aec0ff;
-}
-
-footer p {
-  font-family: var(--content-font);
-  padding: 0.5vh 2vw 0.5vh 1vw;
-  line-height: var(--footer-height);
-  text-align: right;
 }
 
 #todo-choose-cat {
@@ -237,7 +223,6 @@ textarea {
   border-radius: 50%;
   border: solid 2px black;
   max-width: 30px;
-  /* pour que le bouton ne change plus de taille */
 }
 
 span {
@@ -247,6 +232,25 @@ span {
 .delete-img {
   width: 1.5rem;
 }
+
+/* FOOTER */
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #aec0ff;
+}
+
+footer p {
+  font-family: var(--content-font);
+  padding: 0.5vh 2vw 0.5vh 1vw;
+  line-height: var(--footer-height);
+  text-align: right;
+}
+
+
 
 /* Responsive tablette paysage et desktop */
 
