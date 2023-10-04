@@ -312,13 +312,9 @@ footer p {
   #btn-clear-storage {
     height: 1rem;
     width: 1rem;
-    margin-right: 0.2rem;
   }
 
   .clear-storage-txt {
     font-size: 1rem;
-  }
-
-  .clear-storage {
   }
 }
