@@ -29,10 +29,10 @@ myForm.addEventListener("submit", (event) => {
 
   const description = event.target.elements[1].value;
 
-  if (description.trim() === "") {
-    alert("La description de la tâche ne peut pas être vide.");
-    return;
-  }
+if (description.trim().length < 3) {
+  alert("La description de la tâche doit contenir au moins trois caractères.");
+  return;
+}
 
   const newTodo = {
     uuid: uuidGenerator(),
