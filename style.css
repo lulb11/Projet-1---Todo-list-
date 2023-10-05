@@ -55,7 +55,7 @@ p {
 }
 
 .containerAddTask {
-  background-color: #b17a40;
+  background-color: tan;
   border-radius: 10px;
   padding: 1.5vh;
   border: solid grey 1px;
@@ -100,7 +100,7 @@ h3 {
 
 .section-task {
   display: flex;
-  background-color: #b17a40;
+  background-color: tan;
   justify-content: space-between;
   margin: 8px 0 8px 0px;
   border-radius: 5px;
@@ -132,7 +132,7 @@ h3 {
   appearance: none;
   outline: none;
   border: none;
-  background-color: #a57746;
+  background-color: tan;
 }
 
 #to-do {
